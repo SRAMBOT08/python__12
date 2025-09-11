@@ -40,6 +40,17 @@ class Linkedlist:
       temp = temp.next
     newnode.next = temp.next
     temp.next = newnode
+  def del_at_b(self):
+    if self.head is None:
+      print("none")
+    self.head = self.head.next
+  def del_at_end(self):
+    if self.head is None:
+      print("list is empty")
+    temp = self.head
+    while temp.next.next is not None:
+      temp = temp.next
+    temp.next=None
 list1 = Linkedlist()
 n = int(input())
 for i in range(n):
@@ -50,4 +61,8 @@ list1.display()
 list1.spec(num,3)
 list1.display()
 list1.spec(num,1)
+list1.display()
+list1.del_at_b()
+list1.display()
+list1.del_at_end()
 list1.display()
