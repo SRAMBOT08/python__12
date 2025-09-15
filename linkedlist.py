@@ -62,7 +62,7 @@ class Linkedlist:
     if self.head is None:
       print("List is empty")
       return
-    if pos == 1:  # delete head
+    if pos == 1: 
       self.head = self.head.next
       return
     temp = self.head
