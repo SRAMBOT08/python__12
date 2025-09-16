@@ -5,14 +5,15 @@ class treenode:
 class Tree:
   def _init_(self):
     self.root = None
+    
   def odd(self,data,parentdata=None):
     node = treenode(data)
     if not self.root:
       self.root = node
       return
-    parentnode = self.findnode(parentnode,self.root)
+    parentnode = self.findnode(parentnode,self.root) 
     
-    if not parentnode:
+    [if not parentnode:
       print("parentnode not found")
       return
     parentnode = self.findnode(parentnode,self.root)
@@ -20,6 +21,7 @@ class Tree:
       print("Parent not found")
       return
   parentnode.children.append(node)
+  
 def findnode(self,data,node):
   if node.data == data:
     return node
@@ -28,3 +30,4 @@ def findnode(self,data,node):
     if nodefound:
       return nodefound
   return None
+
